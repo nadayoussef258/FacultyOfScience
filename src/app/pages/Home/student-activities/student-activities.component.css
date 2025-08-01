@@ -1,0 +1,218 @@
+.student-activities-container {
+  padding: 2rem;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  min-height: 100vh;
+  direction: rtl;
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: white;
+
+    .main-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+
+      i {
+        margin-left: 1rem;
+        color: #ffd700;
+      }
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      font-weight: 300;
+    }
+  }
+
+  .activities-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .activity-card {
+    background: #fff;
+    color: #1e293b;
+    border-radius: 18px;
+    box-shadow: 0 2px 12px rgba(30,64,175,0.07);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(30,64,175,0.15);
+    }
+
+    .activity-image {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 18px 18px 0 0;
+    }
+
+    .activity-content {
+      padding: 1.2rem;
+
+      .activity-title {
+        color: #1976d2;
+        font-weight: 700;
+        font-size: 1.15rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .activity-description {
+        color: #374151;
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+        line-height: 1.5;
+      }
+
+      .activity-date {
+        color: #64748b;
+        font-size: 0.95rem;
+        display: flex;
+        align-items: center;
+
+        i {
+          margin-left: 0.5rem;
+        }
+      }
+    }
+  }
+
+  .stats-section {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+
+    .stat-item {
+      display: flex;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 1.5rem 2rem;
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.2);
+        transform: translateY(-5px);
+      }
+
+      i {
+        font-size: 2rem;
+        color: #ffd700;
+        margin-left: 1rem;
+      }
+
+      .stat-info {
+        display: flex;
+        flex-direction: column;
+        color: white;
+
+        .stat-number {
+          font-size: 2rem;
+          font-weight: 700;
+          line-height: 1;
+        }
+
+        .stat-label {
+          font-size: 0.9rem;
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .student-activities-container {
+    padding: 1.5rem;
+
+    .section-header .main-title {
+      font-size: 2rem;
+    }
+
+    .activities-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .activity-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      height: 340px;
+    }
+    .activity-image {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 18px 18px 0 0;
+      background: none;
+      margin: 0;
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .student-activities-container {
+    padding: 1rem;
+
+    .section-header .main-title {
+      font-size: 1.8rem;
+    }
+ .activity-image {
+                object-fit: cover;
+  height: 180px;
+
+        }
+    .activities-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .activity-card {
+      height: 260px;
+    }
+    .activity-card .activity-image {
+      object-fit: cover;
+      height: 140px;
+      background: none;
+      margin: 0;
+      display: block;
+    }
+
+    .stats-section {
+      gap: 1.5rem;
+
+      .stat-item {
+        padding: 1rem 1.5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .student-activities-container {
+    .section-header .main-title {
+      font-size: 1.5rem;
+    }
+ .activity-image {
+  height: 180px;
+                object-fit: cover;
+
+        }
+    .stats-section {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+  }
+}

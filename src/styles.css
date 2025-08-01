@@ -1,10 +1,12 @@
-@import url('https://unpkg.com/primeicons@6.0.0/primeicons.css');
-@import url('https://unpkg.com/primeng@19.0.0/resources/themes/lara-light-blue/theme.css');
-@import url('https://unpkg.com/primeng@19.0.0/resources/primeng.min.css');
+
+/* @import url('https://unpkg.com/primeicons@7.0.0/primeicons.css');
+@import url('https://unpkg.com/primeng@20.0.0/resources/themes/lara-light-blue/theme.css');
+@import url('https://unpkg.com/primeng@20.0.0/resources/primeng.min.css'); */
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 *{
   font-family: "Rubik", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 300;
+  font-weight: 370;
   font-style: normal;
+  margin: 0;
 }

@@ -1,0 +1,69 @@
+/* Contact Page Main Container */
+.contact-page {
+  font-family: 'Cairo', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  direction: rtl;
+  text-align: right;
+  overflow-x: hidden;
+  background: #ffffff;
+}
+
+/* Smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Remove default margins and ensure full width */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ensure components stack properly */
+app-topSection,
+app-contact-form,
+app-map {
+  display: block;
+  width: 100%;
+}
+
+/* Add spacing between sections */
+app-contact-form {
+  margin-bottom: 40px;
+}
+
+/* Loading animation for better UX */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid #e9ecef;
+  border-top: 4px solid #007bff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .contact-page {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-page {
+    font-size: 13px;
+  }
+}

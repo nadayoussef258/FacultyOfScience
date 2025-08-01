@@ -1,0 +1,52 @@
+<div class="student-activities-container">
+  <!-- عنوان القسم -->
+  <div class="section-header">
+    <h2 class="main-title">
+      <i class="pi pi-calendar"></i>
+      الأنشطة الطلابية - كلية علوم أسوان
+    </h2>
+    <p class="subtitle">استكشف أحدث الأنشطة والرحلات التعليمية</p>
+  </div>
+
+  <!-- الأنشطة ككاردات ثابتة -->
+  <div class="activities-grid">
+    <div class="activity-card" *ngFor="let activity of activities" (click)="onActivityClick(activity)">
+      <img [src]="activity.image" [alt]="activity.title" class="activity-image">
+      <div class="activity-content">
+        <h3 class="activity-title">{{ activity.title }}</h3>
+        <p class="activity-description" *ngIf="activity.description">
+          {{ activity.description }}
+        </p>
+        <div class="activity-date" *ngIf="activity.date">
+          <i class="pi pi-calendar"></i>
+          <span>{{ activity.date | date:'dd/MM/yyyy' }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- إحصائيات سريعة -->
+  <div class="stats-section">
+    <div class="stat-item">
+      <i class="pi pi-users"></i>
+      <div class="stat-info">
+        <span class="stat-number">{{ activities.length }}</span>
+        <span class="stat-label">نشاط</span>
+      </div>
+    </div>
+    <div class="stat-item">
+      <i class="pi pi-map-marker"></i>
+      <div class="stat-info">
+        <span class="stat-number">15</span>
+        <span class="stat-label">رحلة</span>
+      </div>
+    </div>
+    <div class="stat-item">
+      <i class="pi pi-trophy"></i>
+      <div class="stat-info">
+        <span class="stat-number">8</span>
+        <span class="stat-label">مؤتمر</span>
+      </div>
+    </div>
+  </div>
+</div>

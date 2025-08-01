@@ -1,0 +1,66 @@
+<div class="hero-section">
+  <div class="hero-slider">
+    <!-- Main Slide Container -->
+    <div class="slide-container" 
+         [style.background-image]="'url(' + getCurrentSlide().backgroundImage + ')'">
+      
+      <!-- Background Overlay -->
+      <div class="slide-overlay"></div>
+      
+      <!-- Scientific Background Pattern -->
+      <div class="scientific-pattern">
+        <div class="lab-equipment beaker"></div>
+        <div class="lab-equipment flask"></div>
+        <div class="lab-equipment test-tube"></div>
+        <div class="lab-equipment molecule"></div>
+        <div class="lab-equipment dna"></div>
+        <div class="lab-equipment atom"></div>
+        <div class="lab-equipment microscope"></div>
+      </div>
+
+      <!-- Content Container -->
+      <div class="hero-content">
+        <p-panel class="hero-panel">
+          <div class="content-wrapper">
+            
+            <!-- Left Side - Text Content -->
+            <div class="text-content">
+          
+              
+              <h1 class="hero-title">
+                نحو خريجين مؤهلين لخدمة المجتمع وسوق العمل
+              </h1>
+              
+              <p class="hero-subtitle">
+                انطلق من أسوان، وابنِ مستقبلك العلمي
+              </p>
+              
+              <button class="cta-button" 
+                      (click)="onSlideClick()"
+                      pButton 
+                      pRipple>
+                تصفح برامجنا الأكاديمية
+                <i class="pi pi-arrow-right"></i>
+              </button>
+            </div>
+
+           
+
+          </div>
+        </p-panel>
+      </div>
+
+      <!-- Slide Indicators -->
+      <div class="slide-indicators">
+        <div class="indicators-container">
+          <span *ngFor="let slide of slides; let i = index" 
+                class="indicator" 
+                [class.active]="i === currentSlideIndex"
+                (click)="goToSlide(i)">
+          </span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

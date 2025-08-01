@@ -1,0 +1,35 @@
+<!-- Student Reviews Section -->
+<div class="reviews-container">
+  <!-- Header Section -->
+  <div class="header-section">
+    <h2 class="section-title">آراء خريجين علوم أسوان </h2>
+  
+  </div>
+
+  <!-- Reviews Grid -->
+  <div class="reviews-grid">
+    <div class="review-card" *ngFor="let review of studentReviews">
+      <!-- Student Avatar and Info -->
+      <div class="student-info">
+        <p-avatar 
+          [image]="review.avatar" 
+          size="large" 
+          shape="circle"
+          class="student-avatar">
+        </p-avatar>
+        <div class="student-details">
+          <h3 class="student-name">{{ review.name }}</h3>
+          
+        </div>
+      </div>
+
+      <!-- Review Content -->
+      <div class="review-content">
+        <p class="review-text">{{ review.review }}</p>
+        <span class="review-date">{{ review.year }}</span>
+      </div>
+    </div>
+  </div>
+
+  
+</div>

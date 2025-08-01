@@ -1,6 +1,39 @@
-<!-- navbar.component.html -->
-<p-menubar [model]="items">
-  <ng-template pTemplate="start">
-    <img src="assets/logo.png" alt="Logo" height="40" />
-  </ng-template>
-</p-menubar>
+<div class="header-container">
+  
+  <!-- شريط التنقل الرئيسي -->
+  <nav class="main-navigation">
+    <div class="nav-content">
+      
+      <!-- شعار الكلية -->
+      <div class="logo-section">
+        <img src="assets/logo.png" alt="شعار الكلية" class="logo-image" />
+        <div class="logo-text">
+          <h3 class="college-name">كلية العلوم</h3>
+          <p class="university-name">جامعة أسوان</p>
+        </div>
+      </div>
+
+      <!-- زر التوجلر للموبايل -->
+      <button class="mobile-toggle" (click)="toggleMobileMenu()" [class.active]="isMobileMenuOpen">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+      </button>
+
+      <!-- قائمة التنقل الطبيعية -->
+      <ul class="nav-tabs" [class.mobile-open]="isMobileMenuOpen">
+        <li *ngFor="let tab of navigationTabs" class="nav-tab-item">
+          <a [routerLink]="tab.link"
+             routerLinkActive="active"
+             [routerLinkActiveOptions]="{exact: tab.link === '/'}"
+             class="nav-tab-link"
+             (click)="closeMobileMenu()">
+            {{ tab.label }}
+          </a>
+        </li>
+      </ul>
+
+    </div>
+  </nav>
+
+</div>

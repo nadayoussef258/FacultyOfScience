@@ -1,0 +1,123 @@
+<!-- footer.component.html -->
+<footer class="footer-container">
+  <!-- Main Footer Content -->
+  <div class="footer-main">
+    <div class="footer-content">
+      
+      <!-- Logo and University Info Section -->
+      <div class="footer-section university-info">
+        <div class="footer-logo">
+          <img src="assets/logo.png" alt="شعار كلية العلوم" class="footer-logo-img">
+          <div class="footer-logo-text">
+            <h3 class="footer-college-name">كلية العلوم</h3>
+            <p class="footer-university-name">جامعة أسوان</p>
+          </div>
+        </div>
+        <p class="footer-description">
+          كلية العلوم بجامعة أسوان تهدف إلى إعداد خريجين مؤهلين في مختلف التخصصات العلمية
+          وتقديم بحوث علمية متميزة تخدم المجتمع والتنمية المستدامة في صعيد مصر.
+        </p>
+        
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="pi pi-map-marker contact-icon"></i>
+            <span>{{ contactInfo.address }}</span>
+          </div>
+          <div class="contact-item">
+            <i class="pi pi-phone contact-icon"></i>
+            <span>{{ contactInfo.phone }}</span>
+          </div>
+          <div class="contact-item">
+            <i class="pi pi-envelope contact-icon"></i>
+            <span>{{ contactInfo.email }}</span>
+          </div>
+          <div class="contact-item">
+            <i class="pi pi-globe contact-icon"></i>
+            <span>{{ contactInfo.website }}</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Links Section -->
+      <div class="footer-section">
+        <h4 class="footer-section-title">
+          <i class="pi pi-link section-icon"></i>
+          روابط سريعة
+        </h4>
+        <ul class="footer-links">
+          <li *ngFor="let link of quickLinks">
+            <a [href]="link.link" class="footer-link">
+              <i class="pi pi-angle-left link-arrow"></i>
+              {{ link.label }}
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Departments Section -->
+      <div class="footer-section">
+        <h4 class="footer-section-title">
+          <i class="pi pi-building section-icon"></i>
+          الأقسام الأكاديمية
+        </h4>
+        <ul class="footer-links">
+          <li *ngFor="let dept of departments">
+            <a [href]="dept.link" class="footer-link">
+              <i class="pi pi-angle-left link-arrow"></i>
+              {{ dept.label }}
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Services Section -->
+      <div class="footer-section">
+        <h4 class="footer-section-title">
+          <i class="pi pi-cog section-icon"></i>
+          الخدمات الإلكترونية
+        </h4>
+        <ul class="footer-links">
+          <li *ngFor="let service of services">
+            <a [href]="service.link" class="footer-link">
+              <i class="pi pi-angle-left link-arrow"></i>
+              {{ service.label }}
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+ 
+
+  <!-- Social Media & Bottom Section -->
+  <div class="footer-bottom">
+    <div class="footer-bottom-content">
+      
+      <!-- Social Media Links -->
+      <div class="social-section">
+        <h5 class="social-title">تابعونا على</h5>
+        <div class="social-links">
+          <a 
+            *ngFor="let social of socialLinks" 
+            [href]="social.link" 
+            target="_blank" 
+            class="social-link"
+            [title]="social.label"
+          >
+            <i [class]="social.icon"></i>
+          </a>
+        </div>
+         <p>
+جميع الحقوق محفوظة لدي كلية العلوم-جامعة أسوان  © {{ currentYear }}        </p>
+      </div>
+          
+        
+    </div>
+  </div>
+
+
+
+</footer>

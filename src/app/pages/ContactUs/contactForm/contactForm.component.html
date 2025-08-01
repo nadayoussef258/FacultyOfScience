@@ -1,0 +1,170 @@
+<div class="contact-section">
+  <div class="container">
+    <div class="contact-content">
+      
+      <!-- Form Section (Right side for RTL) -->
+      <div class="contact-form-section">
+        <div class="form-header">
+          <h3>تواصل معنا</h3>
+          <p>أرسل استفسارك أو رسالتك وسنقوم بالرد عليك في أقرب وقت ممكن</p>
+        </div>
+        
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
+          <div class="form-group">
+            <label for="fullName">
+              <i class="pi pi-user"></i>
+              الاسم الكامل
+            </label>
+            <input
+              id="fullName"
+              type="text"
+              formControlName="fullName"
+              placeholder="أدخل اسمك الكامل"
+              [class.ng-invalid]="fullName?.invalid && fullName?.touched"
+            />
+            <small
+              class="error-message"
+              *ngIf="fullName?.invalid && fullName?.touched"
+            >
+              <i class="pi pi-exclamation-triangle"></i>
+              الاسم مطلوب ويجب أن يكون أكثر من حرفين
+            </small>
+          </div>
+
+          <div class="form-group">
+            <label for="email">
+              <i class="pi pi-envelope"></i>
+              البريد الإلكتروني
+            </label>
+            <input
+              id="email"
+              type="email"
+              formControlName="email"
+              placeholder="example&#64;email.com"
+              [class.ng-invalid]="email?.invalid && email?.touched"
+            />
+            <small
+              class="error-message"
+              *ngIf="email?.invalid && email?.touched"
+            >
+              <i class="pi pi-exclamation-triangle"></i>
+              يرجى إدخال بريد إلكتروني صحيح
+            </small>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">
+              <i class="pi pi-phone"></i>
+              رقم الهاتف
+            </label>
+            <input
+              id="phone"
+              type="tel"
+              formControlName="phone"
+              placeholder="01xxxxxxxxx"
+              [class.ng-invalid]="phone?.invalid && phone?.touched"
+            />
+            <small
+              class="error-message"
+              *ngIf="phone?.invalid && phone?.touched"
+            >
+              <i class="pi pi-exclamation-triangle"></i>
+              يرجى إدخال رقم هاتف صحيح
+            </small>
+          </div>
+
+          <div class="form-group">
+            <label for="message">
+              <i class="pi pi-comment"></i>
+              الرسالة
+            </label>
+            <textarea
+              id="message"
+              formControlName="message"
+              placeholder="اكتب رسالتك هنا..."
+              rows="4"
+              [class.ng-invalid]="message?.invalid && message?.touched"
+            ></textarea>
+            <small
+              class="error-message"
+              *ngIf="message?.invalid && message?.touched"
+            >
+              <i class="pi pi-exclamation-triangle"></i>
+              الرسالة مطلوبة ويجب أن تكون أكثر من 10 أحرف
+            </small>
+          </div>
+
+          <button
+            type="submit"
+            class="submit-btn"
+            [disabled]="!contactForm.valid"
+          >
+            <i class="pi pi-send"></i>
+            إرسال الرسالة
+          </button>
+        </form>
+      </div>
+
+      <!-- Info Section (Left side for RTL) -->
+      <div class="contact-info-section">
+        <div class="section-header">
+          <h2>معلومات التواصل</h2>
+          <p>يمكنكم التواصل معنا من خلال الطرق التالية</p>
+        </div>
+
+        <div class="contact-details">
+          <div class="detail-row">
+            <div class="detail-item">
+              <h4>الهاتف</h4>
+              <div class="contact-item">
+                <i class="pi pi-phone"></i>
+                <span>097 345 678 90</span>
+              </div>
+              <div class="contact-item">
+                <i class="pi pi-mobile"></i>
+                <span>+20 100 234 567</span>
+              </div>
+            </div>
+
+            <div class="detail-item">
+              <h4>البريد الإلكتروني</h4>
+              <div class="contact-item">
+                <i class="pi pi-envelope"></i>
+                <span>info&#64;science.au.edu.eg</span>
+              </div>
+            </div>
+
+            <div class="detail-item">
+              <h4>العنوان</h4>
+              <div class="contact-item">
+                <i class="pi pi-map-marker"></i>
+                <span>كلية العلوم - جامعة أسوان - مصر</span>
+              </div>
+            </div>
+
+            <div class="detail-item">
+              <h4>تابعونا</h4>
+              <div class="social-links">
+                <a href="#" class="social-link">
+                  <i class="pi pi-facebook"></i>
+                </a>
+                <a href="#" class="social-link">
+                  <i class="pi pi-twitter"></i>
+                </a>
+                <a href="#" class="social-link">
+                  <i class="pi pi-linkedin"></i>
+                </a>
+                <a href="#" class="social-link">
+                  <i class="pi pi-youtube"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<p-toast></p-toast>

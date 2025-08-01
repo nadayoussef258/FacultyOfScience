@@ -1,10 +1,16 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from "./layout/header/header.component";
+import { FooterComponent } from './layout/footer/footer.component';
+import { HeroSectionComponent } from './pages/Home/heroSection/heroSection.component';
+import { WhyScinceComponent } from './pages/Home/whyScince/whyScince.component';
+import { StudentActivitiesComponent } from './pages/Home/student-activities/student-activities.component';
+import { StudentReviewsComponent } from './pages/Home/student-reviews/student-reviews.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HeaderComponent],
+  imports: [RouterOutlet, HeaderComponent,FooterComponent
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
