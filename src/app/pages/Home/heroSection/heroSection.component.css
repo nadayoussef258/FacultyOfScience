@@ -25,11 +25,7 @@
 
   .slide-overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    /* background: linear-gradient(135deg, rgba(13, 44, 82, 0.4), rgba(0, 150, 100, 0.3)); */
+    inset: 0;
     z-index: 1;
   }
 
@@ -517,3 +513,4 @@
     }
   }
 }
+
