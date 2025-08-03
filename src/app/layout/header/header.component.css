@@ -1,8 +1,5 @@
-/* header.component.css */
 
-/* الحاوي الرئيسي للهيدر */
 .header-container {
-  /* البداية: شفاف مع تأثير الزجاج */
   background: rgba(30, 60, 114, 0.1);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
