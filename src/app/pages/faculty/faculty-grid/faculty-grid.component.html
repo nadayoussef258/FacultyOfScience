@@ -1,0 +1,74 @@
+<div class="faculty-section">
+  <div class="container">
+
+    <!-- عنوان القسم -->
+    <div class="section-header">
+      <span class="subtitle">{{ facultyData.header.subtitle }}</span>
+      <h2 class="main-title">{{ facultyData.header.title }}</h2>
+      <p class="section-description">{{ facultyData.header.description }}</p>
+    </div>
+
+    <!-- شبكة أعضاء هيئة التدريس -->
+    <div class="faculty-grid">
+      <div
+        *ngFor="let member of facultyData.faculty"
+        class="faculty-card">
+
+        <div class="card-header">
+          <div class="member-image">
+            <img [src]="member.image" [alt]="member.name" />
+          </div>
+          <div class="member-info">
+            <h3 class="member-name">{{ member.name }}</h3>
+            <p class="member-title">{{ member.title }}</p>
+            <p class="member-department">{{ member.department }}</p>
+          </div>
+        </div>
+
+        <div class="card-content">
+          <div class="info-section">
+            <h4>التخصص:</h4>
+            <p>{{ member.specialization }}</p>
+          </div>
+
+          <div class="info-section">
+            <h4>المؤهل العلمي:</h4>
+            <p>{{ member.education }}</p>
+          </div>
+
+          <div class="info-section">
+            <h4>سنوات الخبرة:</h4>
+            <p>{{ member.experience }}</p>
+          </div>
+
+        
+
+          <div class="stats-row">
+            <div class="stat-item">
+              <span class="stat-number">{{ member.publications }}</span>
+              <span class="stat-label">بحث منشور</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">{{ member.courses.length }}</span>
+              <span class="stat-label">مقرر دراسي</span>
+            </div>
+          </div>
+
+          <div class="contact-info">
+            <div class="contact-item">
+              <i class="pi pi-envelope"></i>
+              <span>{{ member.email }}</span>
+            </div>
+            <div class="contact-item">
+              <i class="pi pi-phone"></i>
+              <span>{{ member.phone }}</span>
+            </div>
+          </div>
+
+       
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

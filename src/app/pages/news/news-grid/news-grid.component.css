@@ -1,0 +1,159 @@
+.news-section {
+  padding: 120px 0;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  direction: rtl;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* عنوان القسم */
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.subtitle {
+  color: #1e3c72;
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.main-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 1.5rem;
+}
+
+.section-description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #4a5568;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* شبكة الأخبار */
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.news-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.news-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+/* صورة البطاقة */
+.card-image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.news-card:hover .card-image img {
+  transform: scale(1.1);
+}
+
+.category-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* محتوى البطاقة */
+.card-content {
+  padding: 2rem;
+}
+
+.article-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+.article-meta span {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.article-meta i {
+  color: #1e3c72;
+}
+
+.article-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.article-summary {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #4a5568;
+  margin-bottom: 1.5rem;
+}
+
+
+
+/* التجاوب */
+@media (max-width: 768px) {
+  .news-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .main-title {
+    font-size: 2.2rem;
+  }
+
+  .section-description {
+    font-size: 1.1rem;
+  }
+
+  .card-content {
+    padding: 1.5rem;
+  }
+
+  .article-meta {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}

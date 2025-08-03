@@ -1,0 +1,255 @@
+.faculty-section {
+  padding: 120px 0;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  direction: rtl;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* عنوان القسم */
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.subtitle {
+  color: #1e3c72;
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.main-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 1.5rem;
+}
+
+.section-description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #4a5568;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* شبكة أعضاء هيئة التدريس */
+.faculty-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+}
+
+.faculty-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.faculty-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+/* رأس البطاقة */
+.card-header {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: white;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.member-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  flex-shrink: 0;
+}
+
+.member-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.member-info {
+  flex: 1;
+}
+
+.member-name {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.member-title {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.member-department {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+}
+
+/* محتوى البطاقة */
+.card-content {
+  padding: 2rem;
+}
+
+.info-section {
+  margin-bottom: 1.5rem;
+}
+
+.info-section h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a202c;
+  margin-bottom: 0.5rem;
+}
+
+.info-section p {
+  font-size: 0.9rem;
+  color: #4a5568;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.research-interests {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.research-interests li {
+  position: relative;
+  padding-right: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #4a5568;
+}
+
+.research-interests li::before {
+  content: '•';
+  position: absolute;
+  right: 0;
+  color: #1e3c72;
+  font-weight: bold;
+}
+
+/* صف الإحصائيات */
+.stats-row {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: #f8fafc;
+  border-radius: 12px;
+}
+
+.stat-item {
+  text-align: center;
+  flex: 1;
+}
+
+.stat-number {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e3c72;
+  margin-bottom: 0.25rem;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+/* معلومات الاتصال */
+.contact-info {
+  margin-bottom: 2rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+  color: #4a5568;
+}
+
+.contact-item i {
+  color: #1e3c72;
+  font-size: 1rem;
+}
+
+/* أزرار البطاقة */
+.card-actions {
+  text-align: center;
+}
+
+::ng-deep .profile-btn .p-button {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+::ng-deep .profile-btn .p-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(30, 60, 114, 0.3);
+}
+
+/* التجاوب */
+@media (max-width: 768px) {
+  .faculty-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .main-title {
+    font-size: 2.2rem;
+  }
+
+  .section-description {
+    font-size: 1.1rem;
+  }
+
+  .card-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .card-content {
+    padding: 1.5rem;
+  }
+
+  .stats-row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

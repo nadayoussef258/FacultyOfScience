@@ -1,0 +1,31 @@
+.coming-soon {
+  padding: 120px 0;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  direction: rtl;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.coming-soon-content {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.coming-soon-content h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 1rem;
+}
+
+.coming-soon-content p {
+  font-size: 1.2rem;
+  color: #4a5568;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}

@@ -1,0 +1,57 @@
+<div class="why-choose-section" id="why-aswan-science">
+  <div class="container">
+
+    <!-- المحتوى الرئيسي -->
+    <div class="main-content">
+
+      <!-- النص والمحتوى -->
+      <div class="text-content">
+        <div class="section-header">
+          <span class="subtitle">{{ whyChooseData.header.subtitle }}</span>
+          <h2 class="main-title">{{ whyChooseData.header.title }}</h2>
+          <p class="description">
+            {{ whyChooseData.header.description }}
+          </p>
+        </div>
+
+        <!-- المميزات -->
+        <div class="features-list">
+          <div class="feature-item" *ngFor="let feature of whyChooseData.features">
+            <div class="feature-icon">
+              <i [class]="feature.icon"></i>
+            </div>
+            <div class="feature-content">
+              <h4>{{ feature.title }}</h4>
+              <p>{{ feature.description }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- الصورة والعناصر البصرية -->
+      <div class="visual-content">
+        <div class="main-visual">
+          <div class="gradient-bg"></div>
+          <img [src]="whyChooseData.image.src" [alt]="whyChooseData.image.alt" />
+
+          <!-- العناصر الطائفة -->
+          <div class="floating-stats">
+            <div
+              *ngFor="let stat of whyChooseData.floatingStats"
+              class="stat-card"
+              [ngClass]="stat.class">
+              <div class="stat-icon">
+                <i [class]="stat.icon"></i>
+              </div>
+              <div class="stat-info">
+                <span class="stat-number">{{ stat.number }}</span>
+                <span class="stat-label">{{ stat.label }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

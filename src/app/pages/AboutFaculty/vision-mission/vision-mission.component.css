@@ -1,0 +1,201 @@
+.vision-mission-section {
+  padding: 120px 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  direction: rtl;
+  position: relative;
+  overflow: hidden;
+}
+
+.vision-mission-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(30, 60, 114, 0.9);
+  z-index: 1;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* عنوان القسم */
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  color: white;
+}
+
+.subtitle {
+  color: #60a5fa;
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.main-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.section-description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* شبكة العمليات */
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.process-item {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 2.5rem;
+  position: relative;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.process-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #60a5fa, #3b82f6);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.process-item:hover::before {
+  transform: scaleX(1);
+}
+
+.process-item:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* أيقونة العملية */
+.process-icon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, #60a5fa, #3b82f6);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 8px 25px rgba(96, 165, 250, 0.3);
+}
+
+.process-icon i {
+  font-size: 1.8rem;
+  color: white;
+}
+
+/* محتوى العملية */
+.process-content h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.process-content p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* رقم العملية */
+.process-number {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: #60a5fa;
+  font-size: 1.1rem;
+}
+
+/* ألوان مختلفة لكل عنصر */
+.vision .process-icon {
+  background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.vision .process-number {
+  color: #10b981;
+}
+
+.mission .process-icon {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.mission .process-number {
+  color: #f59e0b;
+}
+
+.goals .process-icon {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+
+.goals .process-number {
+  color: #ef4444;
+}
+
+.values .process-icon {
+  background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+}
+
+.values .process-number {
+  color: #8b5cf6;
+}
+
+/* التجاوب */
+@media (max-width: 768px) {
+  .process-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .process-item {
+    padding: 2rem;
+  }
+
+  .main-title {
+    font-size: 2.2rem;
+  }
+
+  .section-description {
+    font-size: 1.1rem;
+  }
+}

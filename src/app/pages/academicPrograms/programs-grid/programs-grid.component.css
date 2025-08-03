@@ -1,0 +1,255 @@
+.programs-section {
+  padding: 120px 0;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  direction: rtl;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* عنوان القسم */
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.subtitle {
+  color: #1e3c72;
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.main-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 1.5rem;
+}
+
+.section-description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #4a5568;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* شبكة البرامج */
+.programs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+}
+
+.program-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.program-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+/* صورة البطاقة */
+.card-image {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.program-card:hover .card-image img {
+  transform: scale(1.1);
+}
+
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(30, 60, 114, 0.8), rgba(96, 165, 250, 0.6));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.program-card:hover .card-overlay {
+  opacity: 1;
+}
+
+.program-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.program-icon i {
+  font-size: 2rem;
+}
+
+/* ألوان الأيقونات */
+.icon-blue i { color: #3b82f6; }
+.icon-purple i { color: #8b5cf6; }
+.icon-green i { color: #10b981; }
+.icon-orange i { color: #f59e0b; }
+.icon-teal i { color: #14b8a6; }
+.icon-brown i { color: #a16207; }
+
+/* محتوى البطاقة */
+.card-content {
+  padding: 2rem;
+}
+
+.program-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 1rem;
+}
+
+.program-description {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #4a5568;
+  margin-bottom: 1.5rem;
+}
+
+/* الوظائف المتاحة */
+.job-opportunities {
+  margin-bottom: 1.5rem;
+}
+
+.job-opportunities h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a202c;
+  margin-bottom: 1rem;
+}
+
+.job-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: #f8fafc;
+  border-radius: 12px;
+}
+
+.job-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  color: #4a5568;
+  font-weight: 500;
+}
+
+.job-item i {
+  color: #1e3c72;
+  font-size: 1rem;
+}
+
+/* مميزات البرنامج */
+.program-features {
+  margin-bottom: 2rem;
+}
+
+.program-features h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a202c;
+  margin-bottom: 0.75rem;
+}
+
+.program-features ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.program-features li {
+  position: relative;
+  padding-right: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #4a5568;
+}
+
+.program-features li::before {
+  content: '✓';
+  position: absolute;
+  right: 0;
+  color: #10b981;
+  font-weight: bold;
+}
+
+/* أزرار البطاقة */
+.card-actions {
+  text-align: center;
+}
+
+::ng-deep .btn-blue .p-button { background: linear-gradient(135deg, #3b82f6, #1d4ed8); border: none; }
+::ng-deep .btn-purple .p-button { background: linear-gradient(135deg, #8b5cf6, #7c3aed); border: none; }
+::ng-deep .btn-green .p-button { background: linear-gradient(135deg, #10b981, #059669); border: none; }
+::ng-deep .btn-orange .p-button { background: linear-gradient(135deg, #f59e0b, #d97706); border: none; }
+::ng-deep .btn-teal .p-button { background: linear-gradient(135deg, #14b8a6, #0f766e); border: none; }
+::ng-deep .btn-brown .p-button { background: linear-gradient(135deg, #a16207, #92400e); border: none; }
+
+::ng-deep .p-button {
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+::ng-deep .p-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* التجاوب */
+@media (max-width: 768px) {
+  .programs-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .main-title {
+    font-size: 2.2rem;
+  }
+
+  .section-description {
+    font-size: 1.1rem;
+  }
+
+  .card-content {
+    padding: 1.5rem;
+  }
+
+  .program-details {
+    padding: 0.75rem;
+  }
+}

@@ -2,13 +2,14 @@
   position: relative;
   height: 60vh;
   min-height: 400px;
-  background: linear-gradient(135deg, #2c3e50 0%, #34495e 50%, #2c3e50 100%);
+  background: linear-gradient(135deg, #274587 0%, #1e3a8a 50%, #274587 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   direction: rtl;
   text-align: center;
+  padding-top: 139px;
 }
 
 .hero-overlay {
@@ -19,9 +20,9 @@
   bottom: 0;
   background: linear-gradient(
     135deg,
-    rgba(44, 62, 80, 0.9) 0%,
-    rgba(52, 73, 94, 0.8) 50%,
-    rgba(44, 62, 80, 0.9) 100%
+    rgba(39, 69, 135, 0.9) 0%,
+    rgba(30, 58, 138, 0.8) 50%,
+    rgba(39, 69, 135, 0.9) 100%
   );
   z-index: 1;
 }
@@ -36,7 +37,7 @@
 
 .hero-title {
   font-size: 4rem;
-  font-weight: 900;
+  font-weight: 600;
   margin-bottom: 20px;
   text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
   background: linear-gradient(135deg, #ffffff 0%, #ecf0f1 100%);
@@ -142,6 +143,7 @@
   .hero-section {
     height: 50vh;
     min-height: 350px;
+    padding-top: 80px; /* تقليل المسافة في الموبايل */
   }
 
   .hero-title {

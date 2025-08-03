@@ -1,0 +1,32 @@
+<div class="stats-section">
+  <div class="container">
+
+    <!-- عنوان القسم -->
+    <div class="section-header">
+      <h2 class="main-title">{{ statsData.header.title }}</h2>
+      <p class="section-description">{{ statsData.header.description }}</p>
+    </div>
+
+    <!-- شبكة الإحصائيات -->
+    <div class="stats-grid">
+      <div
+        *ngFor="let stat of statsData.stats"
+        class="stat-card"
+        [attr.data-color]="stat.color">
+
+        <div class="stat-icon" [ngClass]="'icon-' + stat.color">
+          <i [class]="stat.icon"></i>
+        </div>
+
+        <div class="stat-content">
+          <div class="stat-number">{{ stat.number }}</div>
+          <div class="stat-label">{{ stat.label }}</div>
+          <div class="stat-description">{{ stat.description }}</div>
+        </div>
+
+        <div class="stat-decoration"></div>
+      </div>
+    </div>
+
+  </div>
+</div>

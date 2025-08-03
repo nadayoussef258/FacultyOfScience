@@ -1,0 +1,246 @@
+.why-choose-section {
+  padding: 120px 0;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  direction: rtl;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.main-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+/* النص والمحتوى */
+.text-content {
+  padding-left: 2rem;
+}
+
+.section-header .subtitle {
+  color: #1e3c72;
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.main-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #1a202c;
+  margin-bottom: 1.5rem;
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #4a5568;
+  margin-bottom: 2.5rem;
+}
+
+/* قائمة المميزات */
+.features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateX(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.feature-icon {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.feature-icon i {
+  font-size: 1.3rem;
+  color: white;
+}
+
+.feature-content h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1a202c;
+  margin-bottom: 0.5rem;
+}
+
+.feature-content p {
+  font-size: 0.95rem;
+  color: #6b7280;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* المحتوى البصري */
+.visual-content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-visual {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+}
+
+.gradient-bg {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 20px;
+  z-index: 1;
+}
+
+.main-visual img {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 20px;
+  z-index: 2;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* الإحصائيات الطائفة */
+.floating-stats {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+}
+
+.stat-card {
+  position: absolute;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  animation: float 6s ease-in-out infinite;
+  min-width: 160px;
+}
+
+.stat-icon {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-icon i {
+  font-size: 1.2rem;
+  color: white;
+}
+
+.stat-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-number {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a202c;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+/* مواضع الإحصائيات */
+.stat-1 {
+  top: 5%;
+  right: -10%;
+  animation-delay: 0s;
+}
+
+.stat-2 {
+  bottom: 30%;
+  left: -15%;
+  animation-delay: 2s;
+}
+
+.stat-3 {
+  top: 50%;
+  right: -5%;
+  animation-delay: 4s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+/* التجاوب */
+@media (max-width: 768px) {
+  .main-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .text-content {
+    padding-left: 0;
+    order: 2;
+  }
+
+  .visual-content {
+    order: 1;
+  }
+
+  .main-title {
+    font-size: 2.2rem;
+  }
+
+  .features-list {
+    gap: 1rem;
+  }
+
+  .feature-item {
+    padding: 1.25rem;
+  }
+
+  .stat-card {
+    display: none;
+  }
+}

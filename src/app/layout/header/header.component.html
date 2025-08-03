@@ -33,6 +33,28 @@
         </li>
       </ul>
 
+      <!-- قسم البحث -->
+      <div class="search-section">
+        <!-- زر البحث -->
+        <button class="search-toggle" (click)="toggleSearch()" [class.active]="isSearchOpen">
+          <i class="pi pi-search"></i>
+        </button>
+
+        <!-- مربع البحث -->
+        <div class="search-box" [class.open]="isSearchOpen">
+          <input
+            type="text"
+            placeholder="ابحث في الموقع..."
+            [(ngModel)]="searchQuery"
+            (keypress)="onSearchKeyPress($event)"
+            class="search-input"
+            pInputText>
+          <button class="search-btn" (click)="performSearch()">
+            <i class="pi pi-search"></i>
+          </button>
+        </div>
+      </div>
+
     </div>
   </nav>
 

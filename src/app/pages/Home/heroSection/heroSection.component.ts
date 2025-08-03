@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { PanelModule } from 'primeng/panel';
 import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Router } from '@angular/router';
 
 
 interface HeroSlide {
@@ -19,14 +20,16 @@ interface HeroSlide {
   styleUrls: ['./heroSection.component.css']
 })
 export class HeroSectionComponent implements OnInit, OnDestroy {
-  
+
   currentSlideIndex = 0;
+
+  constructor(private router: Router) {}
   slides: HeroSlide[] = [
     {
       id: 1,
       title: 'Laboratory for testing and medical research',
       subtitle: 'Advanced diagnostic solutions with cutting-edge technology',
-      buttonText: 'Get Started',
+      buttonText: 'تصفح برامجنا الأكاديمية',
       backgroundImage: 'assets/science-web-banner.jpg',
       overlayColor: 'linear-gradient(135deg, rgba(0, 123, 255, 0.8), rgba(0, 200, 150, 0.8))'
     },
@@ -34,7 +37,7 @@ export class HeroSectionComponent implements OnInit, OnDestroy {
       id: 2,
       title: 'Precision Medicine & Advanced Analytics',
       subtitle: 'Delivering accurate results with state-of-the-art equipment',
-      buttonText: 'Learn More',
+      buttonText: 'تصفح برامجنا الأكاديمية',
       backgroundImage: 'assets/billboard-edge-undergrad.jpg',
       overlayColor: 'linear-gradient(135deg, rgba(76, 175, 80, 0.8), rgba(139, 195, 74, 0.8))'
     },
@@ -42,7 +45,7 @@ export class HeroSectionComponent implements OnInit, OnDestroy {
       id: 3,
       title: 'Research Excellence & Innovation',
       subtitle: 'Pioneering medical research for better healthcare outcomes',
-      buttonText: 'Explore Services',
+      buttonText: 'تصفح برامجنا الأكاديمية',
       backgroundImage: 'assets/young-scientist-looking-through-microscope-laboratory-young-scientist-doing-some-research-kopie.jpg',
       overlayColor: 'linear-gradient(135deg, rgba(156, 39, 176, 0.8), rgba(103, 58, 183, 0.8))'
     }
@@ -89,7 +92,7 @@ export class HeroSectionComponent implements OnInit, OnDestroy {
   }
 
   onSlideClick(): void {
-    // Handle slide button click
-    console.log('Button clicked for slide:', this.getCurrentSlide().id);
+    // Navigate to academic programs page
+    this.router.navigate(['/programs']);
   }
 }

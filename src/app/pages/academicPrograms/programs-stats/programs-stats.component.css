@@ -1,0 +1,179 @@
+.stats-section {
+  padding: 120px 0;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #f1f5f9 100%);
+  position: relative;
+  direction: rtl;
+  overflow: hidden;
+}
+
+.stats-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(248, 250, 252, 0.9);
+  z-index: 1;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* عنوان القسم */
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  color: #1a202c;
+}
+
+.main-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #1a202c;
+}
+
+.section-description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #4a5568;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* شبكة الإحصائيات */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.stat-card {
+  background: white;
+  backdrop-filter: blur(10px);
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 2.5rem;
+  text-align: center;
+  position: relative;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #274587, #1e3a8a);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover::before {
+  transform: scaleX(1);
+}
+
+.stat-card:hover {
+  transform: translateY(-10px);
+  background: white;
+  box-shadow: 0 20px 40px rgba(39, 69, 135, 0.15);
+}
+
+/* أيقونة الإحصائية */
+.stat-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.stat-icon i {
+  font-size: 2rem;
+  color: white;
+}
+
+/* ألوان الأيقونات */
+.icon-blue { background: linear-gradient(135deg, #274587, #1e3a8a); }
+.icon-green { background: linear-gradient(135deg, #10b981, #059669); }
+.icon-orange { background: linear-gradient(135deg, #f59e0b, #d97706); }
+.icon-purple { background: linear-gradient(135deg, #8b5cf6, #7c3aed); }
+.icon-teal { background: linear-gradient(135deg, #14b8a6, #0f766e); }
+.icon-yellow { background: linear-gradient(135deg, #eab308, #ca8a04); }
+
+/* محتوى الإحصائية */
+.stat-content {
+  color: #1a202c;
+}
+
+.stat-number {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #274587 0%, #1e3a8a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.stat-label {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #4a5568;
+}
+
+.stat-description {
+  font-size: 0.9rem;
+  color: #6b7280;
+  font-weight: 300;
+}
+
+/* عنصر ديكوري */
+.stat-decoration {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: rgba(39, 69, 135, 0.05);
+  z-index: -1;
+}
+
+/* التجاوب */
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .main-title {
+    font-size: 2.2rem;
+  }
+
+  .section-description {
+    font-size: 1.1rem;
+  }
+
+  .stat-card {
+    padding: 2rem;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+  }
+}

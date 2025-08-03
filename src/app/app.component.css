@@ -1,0 +1,4 @@
+/* إزالة المسافة العلوية - الهيدر سيكون فوق Hero Sections */
+router-outlet {
+  display: block;
+}

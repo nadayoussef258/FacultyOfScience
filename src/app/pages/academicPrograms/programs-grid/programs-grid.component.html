@@ -1,0 +1,54 @@
+<div class="programs-section">
+  <div class="container">
+
+    <!-- عنوان القسم -->
+    <div class="section-header">
+      <span class="subtitle">{{ programsData.header.subtitle }}</span>
+      <h2 class="main-title">{{ programsData.header.title }}</h2>
+      <p class="section-description">{{ programsData.header.description }}</p>
+    </div>
+
+    <!-- شبكة البرامج -->
+    <div class="programs-grid">
+      <div
+        *ngFor="let program of programsData.programs"
+        class="program-card"
+        [attr.data-color]="program.color">
+
+        <div class="card-image">
+          <img [src]="program.image" [alt]="program.title" />
+          <div class="card-overlay">
+            <div class="program-icon" [ngClass]="'icon-' + program.color">
+              <i [class]="program.icon"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-content">
+          <h3 class="program-title">{{ program.title }}</h3>
+          <p class="program-description">{{ program.description }}</p>
+
+          <div class="job-opportunities">
+            <h4>الوظائف المتاحة:</h4>
+            <div class="job-list">
+              <div class="job-item" *ngFor="let job of program.jobTitles">
+                <i class="pi pi-briefcase"></i>
+                <span>{{ job }}</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="program-features">
+            <h4>المميزات الرئيسية:</h4>
+            <ul>
+              <li *ngFor="let feature of program.features">{{ feature }}</li>
+            </ul>
+          </div>
+
+        
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

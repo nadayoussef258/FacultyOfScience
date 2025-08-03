@@ -1,0 +1,45 @@
+<div class="news-section">
+  <div class="container">
+
+    <!-- عنوان القسم -->
+    <div class="section-header">
+      <span class="subtitle">{{ newsData.header.subtitle }}</span>
+      <h2 class="main-title">{{ newsData.header.title }}</h2>
+      <p class="section-description">{{ newsData.header.description }}</p>
+    </div>
+
+    <!-- شبكة الأخبار -->
+    <div class="news-grid">
+      <div
+        *ngFor="let article of newsData.news"
+        class="news-card">
+
+        <div class="card-image">
+          <img [src]="article.image" [alt]="article.title" />
+          <div class="category-badge">{{ article.category }}</div>
+        </div>
+
+        <div class="card-content">
+          <div class="article-meta">
+            <span class="author">
+              <i class="pi pi-user"></i>
+              {{ article.author }}
+            </span>
+            <span class="date">
+              <i class="pi pi-calendar"></i>
+              {{ article.date }}
+            </span>
+            <span class="read-time">
+              <i class="pi pi-clock"></i>
+              {{ article.readTime }}
+            </span>
+          </div>
+
+          <h3 class="article-title">{{ article.title }}</h3>
+          <p class="article-summary">{{ article.summary }}</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,67 @@
+<div class="faculty-intro-section">
+  <div class="container">
+    <div class="intro-content">
+
+      <!-- النص والمحتوى -->
+      <div class="text-content">
+        <div class="section-header">
+          <span class="subtitle">{{ introData.subtitle }}</span>
+          <h2 class="main-title">
+            {{ introData.title.part1 }} <span class="highlight">{{ introData.title.highlight }}</span><br>
+            {{ introData.title.part2 }}
+          </h2>
+          <p class="description">
+            {{ introData.description }}
+          </p>
+        </div>
+
+        <!-- الإحصائيات -->
+        <div class="stats-grid">
+          <div class="stat-item" *ngFor="let stat of introData.stats">
+            <div class="stat-number">{{ stat.number }}</div>
+            <div class="stat-label">{{ stat.label }}</div>
+          </div>
+        </div>
+
+        <!-- الأزرار -->
+        <div class="action-buttons">
+          <p-button
+            [label]="introData.buttons[0].label"
+            [icon]="introData.buttons[0].icon"
+            [iconPos]="introData.buttons[0].iconPos"
+            [outlined]="introData.buttons[0].type === 'secondary'"
+            [class]="introData.buttons[0].type + '-btn'"
+            (click)="scrollToWhySection()">
+          </p-button>
+          <p-button
+            [label]="introData.buttons[1].label"
+            [icon]="introData.buttons[1].icon"
+            [iconPos]="introData.buttons[1].iconPos"
+            [outlined]="introData.buttons[1].type === 'secondary'"
+            [class]="introData.buttons[1].type + '-btn'"
+            (click)="openVideo()">
+          </p-button>
+        </div>
+      </div>
+
+      <!-- الصورة والعناصر البصرية -->
+      <div class="visual-content">
+        <div class="main-image">
+          <img [src]="introData.image.src" [alt]="introData.image.alt" />
+        </div>
+
+        <!-- العناصر الديكورية -->
+        <div class="floating-elements">
+          <div
+            *ngFor="let element of introData.floatingElements"
+            class="element"
+            [ngClass]="element.class">
+            <i [class]="element.icon"></i>
+            <span>{{ element.text }}</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

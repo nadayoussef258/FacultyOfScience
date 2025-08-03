@@ -1,0 +1,34 @@
+<div class="vision-mission-section">
+  <div class="container">
+
+    <!-- عنوان القسم -->
+    <div class="section-header">
+      <span class="subtitle">{{ visionMissionData.header.subtitle }}</span>
+      <h2 class="main-title">{{ visionMissionData.header.title }}</h2>
+      <p class="section-description">
+        {{ visionMissionData.header.description }}
+      </p>
+    </div>
+
+    <!-- شبكة العمليات -->
+    <div class="process-grid">
+
+      <div
+        *ngFor="let process of visionMissionData.processes"
+        class="process-item"
+        [ngClass]="process.class">
+        <div class="process-icon">
+          <i [class]="process.icon"></i>
+        </div>
+        <div class="process-content">
+          <h3 class="process-title">{{ process.title }}</h3>
+          <p class="process-description">
+            {{ process.description }}
+          </p>
+        </div>
+        <div class="process-number">{{ process.number }}</div>
+      </div>
+
+    </div>
+  </div>
+</div>
