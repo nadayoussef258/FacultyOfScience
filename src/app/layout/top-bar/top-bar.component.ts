@@ -16,24 +16,21 @@ export class TopBarComponent implements OnInit, OnDestroy {
   constructor(private router: Router) {}
 
   ngOnInit(): void {
-    // لا حاجة لإضافة scroll listener هنا، سنستخدم HostListener
   }
 
   ngOnDestroy(): void {
-    // تنظيف إذا لزم الأمر
   }
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll(): void {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-    // إخفاء الشريط عند التمرير لأسفل أكثر من 100px
+    
     if (scrollTop > 100 && scrollTop > this.lastScrollTop) {
       this.isHidden = true;
     } else if (scrollTop < this.lastScrollTop) {
       this.isHidden = false;
     }
-
+    
     this.lastScrollTop = scrollTop;
   }
 
@@ -76,7 +73,6 @@ export class TopBarComponent implements OnInit, OnDestroy {
 
   goToMap(): void {
     this.router.navigate(['/contact']).then(() => {
-      // انتظار قليل للتأكد من تحميل الصفحة ثم التمرير للخريطة
       setTimeout(() => {
         const mapElement = document.getElementById('contact-map');
         if (mapElement) {

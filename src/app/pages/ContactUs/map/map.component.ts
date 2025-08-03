@@ -14,7 +14,6 @@ export class MapComponent implements OnInit, AfterViewInit {
   constructor() { }
 
   ngOnInit(): void {
-    // تحديد أيقونة الـ marker الافتراضية
     const iconDefault = L.icon({
       iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png',
       iconRetinaUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon-2x.png',
@@ -33,7 +32,6 @@ export class MapComponent implements OnInit, AfterViewInit {
   }
 
   private initMap(): void {
-    // إنشاء الخريطة
     this.map = L.map('map', {
       center: this.facultyCoordinates,
       zoom: 17,

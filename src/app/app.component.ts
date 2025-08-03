@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from "./layout/header/header.component";
 import { FooterComponent } from './layout/footer/footer.component';
-import { TopBarComponent } from './shared/top-bar/top-bar.component';
+import { TopBarComponent } from './layout/top-bar/top-bar.component';
 import { HeroSectionComponent } from './pages/Home/heroSection/heroSection.component';
 import { WhyScinceComponent } from './pages/Home/whyScince/whyScince.component';
 import { StudentActivitiesComponent } from './pages/Home/student-activities/student-activities.component';

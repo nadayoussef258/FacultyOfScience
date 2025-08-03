@@ -1,7 +1,6 @@
 <div class="top-bar" [class.hidden]="isHidden">
   <div class="container">
     
-    <!-- معلومات الاتصال -->
     <div class="contact-info">
       <div class="info-item">
         <i class="pi pi-phone"></i>
@@ -9,23 +8,19 @@
       </div>
       <div class="info-item">
         <i class="pi pi-envelope"></i>
-        <span>info@aswu.edu.eg</span>
+        <span>info&#64;aswu.edu.eg</span>
       </div>
     </div>
 
-    <!-- السوشيال ميديا والموقع -->
     <div class="social-section">
       
-      <!-- أيقونة الموقع -->
       <div class="location-btn" (click)="goToMap()" title="موقع الكلية">
         <i class="pi pi-map-marker"></i>
         <span>موقع الكلية</span>
       </div>
 
-      <!-- فاصل -->
       <div class="divider"></div>
 
-      <!-- السوشيال ميديا -->
       <div class="social-links">
         <a 
           *ngFor="let social of socialLinks"
