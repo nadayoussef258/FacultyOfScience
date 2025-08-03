@@ -62,7 +62,7 @@ export class FacultyIntroComponent {
     ],
 
     image: {
-      src: 'assets/students.jpeg',
+      src: 'assets/science.jpg',
       alt: 'كلية العلوم'
     },
 

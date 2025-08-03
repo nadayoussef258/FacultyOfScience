@@ -27,7 +27,7 @@ export class ProgramsGridComponent {
         icon: 'pi pi-calculator',
         color: 'blue',
         features: ['نظريات رياضية متقدمة', 'تطبيقات حاسوبية', 'إحصاء وتحليل البيانات'],
-        image: 'assets/1030_SS_Chemical.jpg'
+        image: 'assets/math.jpeg'
       },
       {
         id: 2,
@@ -37,7 +37,7 @@ export class ProgramsGridComponent {
         icon: 'pi pi-bolt',
         color: 'purple',
         features: ['فيزياء الكم', 'فيزياء الجسيمات', 'فيزياء الليزر'],
-        image: 'assets/young-scientist-looking-through-microscope-laboratory-young-scientist-doing-some-research-kopie.jpg'
+        image: 'assets/physics.jpg'
       },
       {
         id: 3,
@@ -57,7 +57,7 @@ export class ProgramsGridComponent {
         icon: 'pi pi-desktop',
         color: 'orange',
         features: ['برمجة متقدمة', 'ذكاء اصطناعي', 'أمن المعلومات'],
-        image: 'assets/digitalization-in-chemical-industry.jpg'
+        image: 'assets/computer.jpg'
       },
       {
         id: 5,
@@ -67,7 +67,7 @@ export class ProgramsGridComponent {
         icon: 'pi pi-heart',
         color: 'teal',
         features: ['علم الوراثة', 'علم البيئة', 'الأحياء الجزيئية'],
-        image: 'assets/scientist-adding-liquid-test-tube-600nw-2493601121.webp'
+        image: 'assets/biology.jpeg'
       },
       {
         id: 6,
@@ -77,7 +77,7 @@ export class ProgramsGridComponent {
         icon: 'pi pi-globe',
         color: 'brown',
         features: ['علم المعادن', 'الجيولوجيا البيئية', 'الاستكشاف'],
-        image: 'assets/env.jpg'
+        image: 'assets/geology.jpg'
       }
     ]
   };
